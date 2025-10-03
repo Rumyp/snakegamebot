@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Snake Game</title>
+    <title>Snake</title>
     <style>
         * {
             margin: 0;
@@ -461,7 +461,7 @@
     </div>
 
     <script>
-        // Game variables
+    
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         const startScreen = document.getElementById('startScreen');
@@ -536,13 +536,12 @@
             volume: 50
         };
         
-        // Available music tracks (will be populated from the sounds/musics folder)
+        //music tracks
         const musicTracks = [
             { name: 'No Music', file: 'none' },
-            // Additional tracks will be added by the loadMusicTracks function
         ];
         
-        // Initialize game
+    
         function initGame() {
             // Reset game state
             snake = [{x: 4, y: 8}];
@@ -568,7 +567,7 @@
             if (gameLoop) clearInterval(gameLoop);
             gameLoop = setInterval(updateGame, gameSpeed);
             
-            // DO NOT restart music here - let it continue playing
+
         }
         
         // Generate food at random position
@@ -1338,4 +1337,5 @@
         window.addEventListener('load', initialize);
     </script>
 </body>
+
 </html>
